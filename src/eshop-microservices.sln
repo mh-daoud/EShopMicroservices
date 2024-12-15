@@ -1,10 +1,39 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{DE9D8B4F-B45F-46DA-8BBD-426CF78CEF95}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{C9380590-D376-40A8-A58F-E11FC2B2A107}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Api", "Services\Catalog\Catalog.Api\Catalog.Api.csproj", "{D005C5F3-C792-4D7D-9D86-398D8FD8E3D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{8C876AA0-3B82-4BCF-8E86-4A243DC40133}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks\BuildingBlocks.csproj", "{5A0430D1-E6F8-4EAE-AFA3-7B101B02B9F6}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D005C5F3-C792-4D7D-9D86-398D8FD8E3D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D005C5F3-C792-4D7D-9D86-398D8FD8E3D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D005C5F3-C792-4D7D-9D86-398D8FD8E3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D005C5F3-C792-4D7D-9D86-398D8FD8E3D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A0430D1-E6F8-4EAE-AFA3-7B101B02B9F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0430D1-E6F8-4EAE-AFA3-7B101B02B9F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0430D1-E6F8-4EAE-AFA3-7B101B02B9F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0430D1-E6F8-4EAE-AFA3-7B101B02B9F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C9380590-D376-40A8-A58F-E11FC2B2A107} = {DE9D8B4F-B45F-46DA-8BBD-426CF78CEF95}
+		{D005C5F3-C792-4D7D-9D86-398D8FD8E3D0} = {C9380590-D376-40A8-A58F-E11FC2B2A107}
+		{5A0430D1-E6F8-4EAE-AFA3-7B101B02B9F6} = {8C876AA0-3B82-4BCF-8E86-4A243DC40133}
 	EndGlobalSection
 EndGlobal
