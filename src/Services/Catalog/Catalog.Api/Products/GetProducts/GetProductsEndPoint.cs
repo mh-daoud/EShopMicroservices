@@ -1,7 +1,7 @@
 ﻿namespace Catalog.Api.Products.GetProducts
 {
 
-    //always best practise to put
+    //always best practice to put
     //request and response in endpoint class, query/command and result in handler class
 
     //public record GetProductsRequest() 
@@ -12,7 +12,7 @@
         {
             app.MapGet("/products", async (ISender sender) =>
             {
-                var result = sender.Send(new GetProductsQuery());
+                var result = await sender.Send(new GetProductsQuery());
 
                 var response = result.Adapt<GetProductsResponse>();
 
@@ -21,7 +21,7 @@
             .WithName("GetProducts")
             .WithSummary("Get Products")
             .WithDescription("Get Products")
-            .Produces<GetProductsResponse>(StatusCodes.Status201Created)
+            .Produces<GetProductsResponse>(StatusCodes.Status200OK)
             .ProducesProblem(StatusCodes.Status400BadRequest);
         }
 

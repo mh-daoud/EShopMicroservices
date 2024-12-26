@@ -10,7 +10,7 @@ namespace Catalog.Api.Products.GetProductById
     {
         public void AddRoutes(IEndpointRouteBuilder app)
         {
-            app.MapGet("/product/${id}", async (Guid id, ISender sender) =>
+            app.MapGet("/products/{id}", async (Guid id, ISender sender) =>
             {
                 var result = await sender.Send(new GetProductByIdQuery(id));
 
@@ -18,11 +18,11 @@ namespace Catalog.Api.Products.GetProductById
 
                 return Results.Ok(response);
             })
-             .WithName("GetProductById")
+            .WithName("GetProductById")
             .WithSummary("Get Product By Id")
             .WithDescription("Get Product By Id")
-            .Produces<GetProductByIdResponse>(StatusCodes.Status201Created)
-            .ProducesProblem(StatusCodes.Status400BadRequest); ;
+            .Produces<GetProductByIdResponse>(StatusCodes.Status200OK)
+            .ProducesProblem(StatusCodes.Status400BadRequest);
         }
     }
 }
